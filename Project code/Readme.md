@@ -8,30 +8,37 @@ The project has three main parts:
 receive messages.
 • Client (User A): The part of the program that connects to the server, encrypts
 outgoing messages, and decrypts incoming messages.
-• Server (User B): The server listens for incoming messages from the client, decrypts them, and sends back encrypted replies.
+• Server (User B): The server listens for incoming messages from the client, decrypts them and sends back encrypted replies.
+
+
 
 Each part of the project is implemented as follows:
 1. Chat Window:
 • A simple Java Swing interface where users can type messages and see replies.
 • Encrypted messages are displayed in a special admin panel.
-2. Network Communication (Client-Server):
-4
+
+
+3. Network Communication (Client-Server):
 • Client: Connects to the server and encrypts outgoing messages.
-• Server: Receives and decrypts messages from the client and sends encrypted responses.
-3. Encryption:
+• Server: Receives and decrypts messages from the client and sends encrypted responses.
+
+5. Encryption:
 • Server: We use the AutoKey Cipher to encrypt and decrypt each message,
 ensuring they’re secure during transmission.
+
 
 The project uses the AutoKey Cipher for encrypting and decrypting messages:
 • Each character in the message is shifted based on a key, making it hard to read
 without decrypting.
 • This method provides basic security and is efficient for small chat applications.
 
+
 • Java Development Kit (JDK): Version 8 or higher was used for compiling and
 running the Java code.
 • Integrated Development Environment (IDE): NetBeans or Eclipse IDE for efficient debugging and testing.
 • Java Swing Library: For creating the user interface.
 • Networking Libraries: Java’s java.net package to manage socket communication between the client and server
+
 
 • The client and server programs were run on the same machine, simulating a local
 network.
@@ -60,7 +67,8 @@ basic security. To protect messages better, a stronger encryption method, like
 AES, would be more suitable.
 • Local Testing: The application was mainly tested on a single computer network,
 so its performance and security in larger networks were not explored.
-• Simple User Interface: The design is basic, with only text messaging between
+• Simple User Interface: 
+The design is basic, with only text messaging between
 two users. It lacks features like sending images, creating group chats, or having
 notification sounds.
 • Limited Error Handling: The program has basic error handling, meaning that if
